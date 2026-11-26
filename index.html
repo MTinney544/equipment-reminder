@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipment Collection Reminder</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: transparent;
+  }
+
+  #overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  #notice {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  }
+
+  #notice p {
+    color: #dc2626;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+  }
+
+  #close {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="overlay">
+  <div id="notice">
+
+    <p>
+      Equipment is only available for collection on Mondays,
+      Wednesdays &amp; Fridays between the hours of
+      9.00am &amp; 10:30am and 14:00pm &amp; 16:30pm.
+    </p>
+
+    <p>
+      Equipment requests for collection outside these times
+      will not be processed.
+    </p>
+
+    <button id="close" onclick="document.getElementById('overlay').style.display='none'">
+      Close
+    </button>
+
+  </div>
+</div>
+
+</body>
+</html>
